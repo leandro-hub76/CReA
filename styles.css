@@ -1,0 +1,728 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #505050;
+    background-color: #f3f8fc;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+
+/* ============================================ENCABEZADO============================================ */
+#encabezado {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    padding: 0 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-bottom: 1px solid #bdbdbd;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.logo-ucb {
+    width: 290px;
+    height: auto;
+    object-fit: contain;
+}
+
+.logo-vliruos {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+
+
+.idiomas {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    flex-shrink: 0;
+}
+
+.idiomas a {
+    color: #505050;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.idiomas a:hover {
+    color: #164b75;
+}
+
+.separador-idiomas {
+    width: 1px;
+    height: 32px;
+    background-color: #333333;
+}
+
+
+
+/* ============================================SEPARACIÓN DE VISTAS============================================ */
+#contenido-principal {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.vista {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    height: calc(100vh - 100px);
+    min-height: 650px;
+    margin-bottom: 35px;
+    overflow: hidden;
+    background-color: #f3f8fc;
+    scroll-margin-top: 100px;
+}
+
+.vista:last-child {
+    margin-bottom: 0;
+}
+
+
+
+/* ============================================INICIO============================================ */
+
+.vista-inicio {
+    display: flex;
+    align-items: stretch;
+
+    padding: 0 4%;
+}
+
+.vista-inicio .presentacion {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 36%;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.boton-comenzar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    max-width: 422px;
+    height: 89px;
+    margin-top: 130px;
+    padding: 15px;
+    border: none;
+    border-radius: 23px;
+    background-color: #164b75;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.boton-comenzar:hover {
+    background-color: #0d385b;
+    transform: translateY(-2px);
+}
+
+
+.vista-inicio .descripcion {
+    width: 95%;
+    max-width: 430px;
+    margin-top: 122px;
+    margin-bottom: 0;
+    color: #505050;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 1.35;
+    text-align: justify;
+}
+
+
+/* ============================================ICONOS DE REDES SOCIALES============================================ */
+
+.redes-sociales {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 0;
+}
+
+.redes-sociales a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 63px;
+    height: 63px;
+    flex: 0 0 63px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: #164b75;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.22);
+    text-decoration: none;
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.redes-sociales a:hover {
+    transform: translateY(-4px);
+    background-color: #0d385b;
+}
+
+.redes-sociales img {
+    display: block;
+
+    width: 55px;
+    height: 55px;
+    max-width: none;
+
+    object-fit: contain;
+}
+
+.redes-inicio {
+    width: 100%;
+
+    margin-top: auto;
+    margin-bottom: 104px;
+
+    padding-right: 4px;
+}
+
+
+
+/* ============================================MAPA PRINCIPAL============================================ */
+.vista-inicio .seccion-mapa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 64%;
+    height: 100%;
+    min-width: 0;
+
+    padding: 15px 0;
+}
+
+.mapa-bolivia {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    max-height: 800px;
+
+    object-fit: contain;
+    object-position: center;
+}
+
+
+
+/* ============================================BOTÓN DE MENÚ============================================ */
+.boton-menu {
+    position: absolute;
+    top: 6.5%;
+    left: 4%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 55px;
+    height: 55px;
+    padding: 0;
+    border: none;
+    border-radius: 11px;
+    background-color: #205d91;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.boton-menu span {
+    display: block;
+    width: 35px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+
+/* ============================================REDES SOCIALES LATERALES============================================ */
+.redes-laterales {
+    position: absolute;
+    top: 16%;
+    right: 4%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: auto;
+    height: auto;
+    gap: 64px;
+    margin: 0;
+    padding: 0;
+}
+
+.redes-laterales a {
+    width: 63px;
+    height: 63px;
+    flex: 0 0 63px;
+}
+
+.redes-laterales img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+
+
+/* ============================================QUIÉNES SOMOS?============================================ */
+.vista-quienes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fondo-mapa-quienes {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: url("imagenes/mapa-principal.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.18;
+    pointer-events: none;
+}
+
+.contenido-quienes {
+    position: relative;
+    z-index: 2;
+    width: 56%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.panel-quienes {
+    width: 100%;
+    padding: 32px 44px;
+    border-radius: 27px;
+    background-color: rgba(22, 75, 117, 0.82);
+    color: #ffffff;
+}
+
+.panel-quienes h1 {
+    margin: 0 0 28px;
+    color: #ff9000;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.panel-quienes p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.22;
+}
+
+
+/* ============================================MAPA INTERACTIVO============================================ */
+
+.vista-mapa-interactivo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor del mapa */
+
+.contenedor-mapa-interactivo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 25px 10%;
+}
+
+/* Imagen del mapa interactivo */
+
+.imagen-mapa-interactivo {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    max-width: none;
+
+    object-fit: contain;
+    object-position: center;
+}
+
+
+/* ============================================
+   11. BOTÓN PARA VOLVER A ¿QUIÉNES SOMOS?
+   Este botón ahora está en el mapa interactivo.
+============================================ */
+
+.boton-quienes {
+    position: absolute;
+    left: 4%;
+    bottom: 5%;
+
+    z-index: 15;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 178px;
+    min-height: 40px;
+
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 25px;
+
+    background-color: #164b75;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.boton-quienes:hover {
+    background-color: #0d385b;
+    transform: translateY(-2px);
+}
+
+
+/* ============================================PIE DE PÁGINA============================================ */
+
+#pie-pagina {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 50px;
+    padding: 15px 4%;
+    gap: 15px;
+    background-color: #ffffff;
+    border-top: 1px solid #bdbdbd;
+    color: #164b75;
+    font-size: 14px;
+}
+
+.copyright {
+    margin: 0;
+}
+
+.enlaces-legales {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+}
+
+.enlaces-legales a {
+    color: #164b75;
+    text-decoration: none;
+}
+
+.enlaces-legales a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================ANIMACIONES========================================== */
+
+.vista {
+    --progreso-scroll: 0;
+    opacity: 0;
+    transform: translateY(45px) scale(0.985);
+    filter: blur(4px);
+    transition:
+        opacity 0.8s ease,
+        transform 1s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.8s ease;
+    will-change: opacity, transform;
+    backface-visibility: hidden;
+}
+
+
+.vista.seccion-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
+
+/* ==========================================TEXTO Y MAPA========================================== */
+
+.vista-inicio .presentacion {
+    opacity: 0;
+    transform: translateX(-35px) translateY(20px);
+    transition:
+        opacity 0.8s ease,
+        transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vista-inicio .seccion-mapa {
+    opacity: 0;
+    transform: translateX(35px) scale(0.94);
+    transition:
+        opacity 1s ease,
+        transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Entrada escalonada */
+.vista-inicio.seccion-visible .presentacion {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+    transition-delay: 0.1s;
+}
+
+.vista-inicio.seccion-visible .seccion-mapa {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    transition-delay: 0.25s;
+}
+
+/* El mapa tiene su propia animación */
+.vista-inicio .mapa-bolivia {
+    transform: scale(0.94);
+    transition: transform 1.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vista-inicio.seccion-visible .mapa-bolivia {
+    transform: scale(1);
+}
+
+/* Movimiento sutil vinculado al desplazamiento */
+.vista-inicio.seccion-visible .presentacion {
+    translate: 0 calc(var(--progreso-scroll, 0) * -10px);
+}
+
+.vista-inicio.seccion-visible .seccion-mapa {
+    translate: 0 calc(var(--progreso-scroll, 0) * 14px);
+}
+
+/* ==========================================QUIÉNES SOMOS========================================== */
+
+.vista-quienes {
+    display: none;
+}
+
+
+.vista-quienes.quienes-activa {
+    display: flex;
+    opacity: 1;
+    filter: blur(0);
+    transform: none;
+    animation: revelarVista 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes revelarVista {
+    from {
+        opacity: 0;
+        clip-path: inset(12% 8% 12% 8% round 35px);
+        filter: blur(8px);
+    }
+
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0 round 0);
+        filter: blur(0);
+    }
+}
+
+.vista-quienes .panel-quienes {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+    filter: blur(5px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 1s cubic-bezier(0.16, 1, 0.3, 1),
+        filter 0.8s ease;
+}
+
+.vista-quienes.seccion-visible .panel-quienes {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+    transition-delay: 0.2s;
+}
+
+.vista-quienes .fondo-mapa-quienes {
+    opacity: 0;
+    transform: scale(1.08);
+    transition:
+        opacity 1.2s ease,
+        transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vista-quienes.seccion-visible .fondo-mapa-quienes {
+    opacity: 0.18;
+    transform: scale(1);
+}
+
+/* ==========================================MAPA INTERACTIVO========================================== */
+
+.vista-mapa-interactivo .contenedor-mapa-interactivo {
+    opacity: 0;
+    transform: translateY(35px) scale(0.93);
+    filter: blur(5px);
+    transition:
+        opacity 1s ease,
+        transform 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+        filter 0.9s ease;
+}
+
+.vista-mapa-interactivo.seccion-visible
+.contenedor-mapa-interactivo {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+    transition-delay: 0.15s;
+}
+
+.vista-mapa-interactivo .boton-quienes {
+    opacity: 0;
+    transform: translateY(18px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.vista-mapa-interactivo.seccion-visible .boton-quienes {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.4s;
+}
+
+/* ==========================================BOTONES Y REDES SOCIALES
+========================================== */
+
+.vista .boton-menu,
+.vista .redes-sociales {
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+
+.vista:not(.seccion-visible) .boton-menu,
+.vista:not(.seccion-visible) .redes-sociales {
+    opacity: 0;
+}
+
+.vista .redes-sociales a {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.vista.seccion-visible .redes-sociales a:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 12px 24px rgba(12, 45, 75, 0.22);
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    .vista,
+    .vista *,
+    .vista::before,
+    .vista::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+        filter: none !important;
+    }
+}
