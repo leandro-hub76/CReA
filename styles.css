@@ -330,7 +330,7 @@ img {
     position: absolute;
     inset: 0;
     z-index: -1;
-    background-image: url("imagenes/mapa-principal.png");
+    background-image: url("images/mapa-principal.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
